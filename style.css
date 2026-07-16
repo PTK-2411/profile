@@ -301,6 +301,44 @@ a {
     }
 }
 
+.lang-toggle {
+    border: 1px solid var(--line);
+    color: var(--ink);
+    cursor: pointer;
+    font-family: var(--mono);
+    letter-spacing: .08em;
+    transition: border-color .32s var(--ease-out), background .32s var(--ease-out), transform .32s var(--ease-out);
+    background: 0 0;
+    border-radius: 999px;
+    align-items: center;
+    gap: .35rem;
+    padding: .28rem .65rem;
+    font-size: .62rem;
+    font-weight: 700;
+    display: inline-flex
+}
+
+.lang-toggle:hover {
+    background: color-mix(in srgb, var(--acid) 18%, transparent);
+    border-color: color-mix(in srgb, var(--ink) 35%, transparent);
+    transform: translateY(-1px)
+}
+
+.lang-toggle:focus-visible {
+    outline: 3px solid var(--coral);
+    outline-offset: 3px
+}
+
+.lang-toggle span {
+    opacity: 0.5;
+    transition: opacity 0.3s var(--ease-out), color 0.3s var(--ease-out);
+}
+
+.lang-toggle span.is-active {
+    opacity: 1;
+    color: var(--coral);
+}
+
 .theme-toggle {
     border: 1px solid var(--line);
     color: var(--ink);
@@ -2400,8 +2438,8 @@ h1 {
     --brand: #1877f2
 }
 
-.social-link--youtube {
-    --brand: red
+.social-link--zalo {
+    --brand: #0068ff
 }
 
 .social-link--x {
@@ -2421,7 +2459,7 @@ h1 {
 }
 
 .social-link--facebook:hover,
-.social-link--youtube:hover {
+.social-link--zalo:hover {
     color: #fff
 }
 
